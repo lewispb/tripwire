@@ -1,0 +1,9 @@
+<h1>New list item</h1>
+
+<%= render "form", list_item: @list_item %>
+
+<br>
+
+<div>
+  <%= link_to "Back to list items", [ @list_item.trip, @list_item.list ] %>
+</div>

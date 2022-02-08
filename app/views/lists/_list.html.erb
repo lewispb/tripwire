@@ -1,0 +1,12 @@
+<div id="<%= dom_id list %>">
+  <p>
+    <strong>Trip:</strong>
+    <%= list.trip_id %>
+  </p>
+
+  <p>
+    <strong>Name:</strong>
+    <%= link_to list.name, [ list.trip, list ] %>
+  </p>
+
+</div>

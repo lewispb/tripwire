@@ -10,10 +10,26 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_02_08_211545) do
+ActiveRecord::Schema.define(version: 2022_02_08_230319) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "list_items", force: :cascade do |t|
+    t.bigint "list_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.string "title"
+    t.index ["list_id"], name: "index_list_items_on_list_id"
+  end
+
+  create_table "lists", force: :cascade do |t|
+    t.bigint "trip_id", null: false
+    t.string "name"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["trip_id"], name: "index_lists_on_trip_id"
+  end
 
   create_table "locations", force: :cascade do |t|
     t.string "city"
@@ -36,6 +52,8 @@ ActiveRecord::Schema.define(version: 2022_02_08_211545) do
     t.index ["origin_id"], name: "index_trips_on_origin_id"
   end
 
+  add_foreign_key "list_items", "lists"
+  add_foreign_key "lists", "trips"
   add_foreign_key "trips", "locations", column: "destination_id"
   add_foreign_key "trips", "locations", column: "origin_id"
 end

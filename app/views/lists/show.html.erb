@@ -1,0 +1,16 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @list %>
+
+<div>
+  <%= link_to "Edit this list", [ :edit, @trip, @list ] %> |
+  <%= link_to "Back to trip", @trip %>
+
+  <%= button_to "Destroy this list", [ @trip, @list ], method: :delete %>
+</div>
+
+
+<h2>List Items</h2>
+
+<%= render @list.items %>
+<%= link_to "New Item", [ :new, @trip, @list, :list_item ] %>

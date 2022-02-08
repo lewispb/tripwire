@@ -12,23 +12,13 @@
   <% end %>
 
   <div>
-    <%= form.label :starts_on, style: "display: block" %>
+    <%= form.label :starts_on, "Leaving on" %>
     <%= form.date_field :starts_on %>
   </div>
 
   <div>
-    <%= form.label :ends_on, style: "display: block" %>
+    <%= form.label :ends_on, "Returning on" %>
     <%= form.date_field :ends_on %>
-  </div>
-
-  <div>
-    <%= form.label :origin_id, style: "display: block" %>
-    <%= form.text_field :origin_id %>
-  </div>
-
-  <div>
-    <%= form.label :destination_id, style: "display: block" %>
-    <%= form.text_field :destination_id %>
   </div>
 
   <div>

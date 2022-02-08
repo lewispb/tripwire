@@ -1,3 +1,20 @@
+GIT
+  remote: https://github.com/rails/dartsass-rails.git
+  revision: a6fd2838bf01a7706e61419f381036c711e0bf24
+  specs:
+    dartsass-rails (0.2.0)
+      railties (>= 6.0.0)
+
+GIT
+  remote: https://github.com/rails/propshaft.git
+  revision: 2585491f6eac842788cad6d68ec0c188e467e7fa
+  specs:
+    propshaft (0.5.0)
+      actionpack (>= 7.0.0)
+      activesupport (>= 7.0.0)
+      rack
+      railties (>= 7.0.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -228,9 +245,11 @@ PLATFORMS
 DEPENDENCIES
   bootsnap
   capybara
+  dartsass-rails!
   debug
   importmap-rails
   pg
+  propshaft!
   puma
   rails (~> 7.0.1)
   redis (~> 4.0)

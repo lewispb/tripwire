@@ -8,3 +8,8 @@
 
   <%= button_to "Destroy this trip", @trip, method: :delete %>
 </div>
+
+<h2>Lists</h2>
+
+<%= render @trip.lists %>
+<%= link_to "New List", new_trip_list_path(@trip) %>
