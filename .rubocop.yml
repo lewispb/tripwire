@@ -1,0 +1,21 @@
+require: rubocop-rails
+
+AllCops:
+  TargetRubyVersion: 3.0
+  Exclude:
+    - bin/*
+    - db/schema.rb
+    - db/migrate/*
+
+Style/StringLiterals:
+  Enabled: true
+  EnforcedStyle: double_quotes
+
+Style/ClassAndModuleChildren:
+  Enabled: false
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+Style/Documentation:
+  Enabled: false
