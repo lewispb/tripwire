@@ -1,9 +1,11 @@
-# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+packing_list:
+  trip: lon_brs_trip
+  name: Packing List
 
-one:
-  trip: one
-  name: MyString
+todo_list:
+  trip: lon_brs_trip
+  name: Todo List
 
-two:
-  trip: two
-  name: MyString
+another_todo_list:
+  trip: brs_lon_trip
+  name: Another Todo List

@@ -4,7 +4,7 @@ require "test_helper"
 
 class TripsControllerTest < ActionDispatch::IntegrationTest
   setup do
-    @trip = trips(:one)
+    @trip = trips(:lon_brs_trip)
   end
 
   test "should get index" do
@@ -19,9 +19,7 @@ class TripsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create trip" do
     assert_difference("Trip.count") do
-      post trips_url,
-           params: { trip: { destination_id: @trip.destination_id, ends_on: @trip.ends_on, origin_id: @trip.origin_id,
-                             starts_on: @trip.starts_on } }
+      post trips_url, params: { trip: { ends_on: @trip.ends_on, starts_on: @trip.starts_on } }
     end
 
     assert_redirected_to trip_url(Trip.last)
@@ -38,9 +36,7 @@ class TripsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update trip" do
-    patch trip_url(@trip),
-          params: { trip: { destination_id: @trip.destination_id, ends_on: @trip.ends_on, origin_id: @trip.origin_id,
-                            starts_on: @trip.starts_on } }
+    patch trip_url(@trip), params: { trip: { ends_on: @trip.ends_on, starts_on: @trip.starts_on } }
     assert_redirected_to trip_url(@trip)
   end
 

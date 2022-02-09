@@ -2,47 +2,53 @@ require "test_helper"
 
 class ListsControllerTest < ActionDispatch::IntegrationTest
   setup do
-    @list = lists(:one)
+    @trip = trips(:lon_brs_trip)
+    @list = lists(:packing_list)
   end
 
-  test "should get index" do
-    get lists_url
+  test "gets index" do
+    get trip_lists_url(@trip)
+
     assert_response :success
   end
 
-  test "should get new" do
-    get new_list_url
+  test "gets new" do
+    get new_trip_list_url(@trip)
+
     assert_response :success
   end
 
-  test "should create list" do
+  test "creates list" do
     assert_difference("List.count") do
-      post lists_url, params: { list: { name: @list.name, trip_id: @list.trip_id } }
+      post trip_lists_url(@trip), params: { list: { name: @list.name } }
     end
 
-    assert_redirected_to list_url(List.last)
+    assert_redirected_to trip_list_url(@trip, List.last)
   end
 
-  test "should show list" do
-    get list_url(@list)
+  test "shows list" do
+    get trip_list_url(@list.trip, @list)
+
     assert_response :success
   end
 
-  test "should get edit" do
-    get edit_list_url(@list)
+  test "gets edit" do
+    get edit_trip_list_url(@list.trip, @list)
+
     assert_response :success
   end
 
-  test "should update list" do
-    patch list_url(@list), params: { list: { name: @list.name, trip_id: @list.trip_id } }
-    assert_redirected_to list_url(@list)
+  test "updates list" do
+    patch trip_list_url(@list.trip, @list), params: { list: { name: @list.name } }
+
+    assert_redirected_to trip_list_url(@trip)
   end
 
-  test "should destroy list" do
+  test "destroys list" do
     assert_difference("List.count", -1) do
-      delete list_url(@list)
+      delete trip_list_url(@list.trip, @list)
     end
 
-    assert_redirected_to lists_url
+    assert_redirected_to trip_lists_url(@list.trip)
   end
 end

@@ -2,47 +2,54 @@ require "test_helper"
 
 class ListItemsControllerTest < ActionDispatch::IntegrationTest
   setup do
-    @list_item = list_items(:one)
+    @trip = trips(:lon_brs_trip)
+    @list = lists(:packing_list)
+    @list_item = list_items(:suitcase_list_item)
   end
 
   test "should get index" do
-    get list_items_url
+    get trip_list_list_items_url(@trip, @list)
+
     assert_response :success
   end
 
   test "should get new" do
-    get new_list_item_url
+    get new_trip_list_list_item_url(@trip, @list)
+
     assert_response :success
   end
 
   test "should create list_item" do
     assert_difference("ListItem.count") do
-      post list_items_url, params: { list_item: { list_id: @list_item.list_id } }
+      post trip_list_list_items_url(@trip, @list), params: { list_item: { title: "New Item" } }
     end
 
-    assert_redirected_to list_item_url(ListItem.last)
+    assert_redirected_to trip_list_url(@trip, @list)
   end
 
   test "should show list_item" do
-    get list_item_url(@list_item)
+    get trip_list_list_item_url(@list_item.trip, @list_item.list, @list_item)
+
     assert_response :success
   end
 
   test "should get edit" do
-    get edit_list_item_url(@list_item)
+    get edit_trip_list_list_item_url(@trip, @list, @list_item)
+
     assert_response :success
   end
 
   test "should update list_item" do
-    patch list_item_url(@list_item), params: { list_item: { list_id: @list_item.list_id } }
-    assert_redirected_to list_item_url(@list_item)
+    patch trip_list_list_item_url(@list_item.trip, @list_item.list, @list_item), params: { list_item: { title: "Updated Title" } }
+
+    assert_redirected_to trip_list_url(@list_item.trip, @list_item.list)
   end
 
   test "should destroy list_item" do
     assert_difference("ListItem.count", -1) do
-      delete list_item_url(@list_item)
+      delete trip_list_list_item_url(@list_item.trip, @list_item.list, @list_item)
     end
 
-    assert_redirected_to list_items_url
+    assert_redirected_to trip_list_url(@list_item.trip, @list_item.list)
   end
 end

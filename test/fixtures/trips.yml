@@ -1,13 +1,11 @@
-# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
-
-one:
+lon_brs_trip:
   starts_on: 2022-02-08
   ends_on: 2022-02-08
-  origin: one
-  destination: one
+  origin: london_location
+  destination: bristol_location
 
-two:
+brs_lon_trip:
   starts_on: 2022-02-08
   ends_on: 2022-02-08
-  origin: two
-  destination: two
+  origin: bristol_location
+  destination: london_location

@@ -3,8 +3,8 @@
 <%= render @list_item %>
 
 <div>
-  <%= link_to "Edit this list item", edit_list_item_path(@list_item) %> |
-  <%= link_to "Back to list items", list_items_path %>
+  <%= link_to "Edit this list item", edit_trip_list_list_item_path(@trip, @list, @list_item) %> |
+  <%= link_to "Back to list items", trip_list_path(@trip, @list) %>
 
-  <%= button_to "Destroy this list item", @list_item, method: :delete %>
+  <%= button_to "Destroy this list item", [ @trip, @list, @list_item ], method: :delete %>
 </div>

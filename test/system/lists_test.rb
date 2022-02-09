@@ -23,7 +23,7 @@ class ListsTest < ApplicationSystemTestCase
   end
 
   test "should update List" do
-    visit list_url(@list)
+    visit trip_list_url(@list)
     click_on "Edit this list", match: :first
 
     fill_in "Name", with: @list.name
@@ -35,7 +35,7 @@ class ListsTest < ApplicationSystemTestCase
   end
 
   test "should destroy List" do
-    visit list_url(@list)
+    visit trip_list_url(@list)
     click_on "Destroy this list", match: :first
 
     assert_text "List was successfully destroyed"

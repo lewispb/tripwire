@@ -37,7 +37,7 @@ class ListItemsController < ApplicationController
 
   def destroy
     @list_item.destroy
-    redirect_to list_items_url, notice: "List item was successfully destroyed."
+    redirect_to trip_list_url(@trip, @list), notice: "List item was successfully destroyed."
   end
 
   private

@@ -1,7 +1,11 @@
-# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+suitcase_list_item:
+  list: packing_list
+  title: Pack suitcase
 
-one:
-  list: one
+toothbrush_list_item:
+  list: packing_list
+  title: Pack Toothbrush
 
-two:
-  list: two
+apply_list_item:
+  list: todo_list
+  title: Apply for Esta

@@ -1,13 +1,11 @@
-# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
-
-one:
+london_location:
   city: MyString
   state: MyString
   country: MyString
   longitude: 9.99
   latitude: 9.99
 
-two:
+bristol_location:
   city: MyString
   state: MyString
   country: MyString
