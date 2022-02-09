@@ -1,5 +1,7 @@
 # TripWire
 
+![TripWire CI](https://github.com/lewispb/tripwire/actions/workflows/rubyonrails.yml/badge.svg)
+
 TripWire is an open source Ruby on Rails application to help you plan your next trip.
 
 It's under development and you're welcome to contribute.
