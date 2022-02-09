@@ -7,15 +7,13 @@ class ListItemsController < ApplicationController
     @list_items = ListItem.all
   end
 
-  def show
-  end
+  def show; end
 
   def new
     @list_item = ListItem.new(list: @list)
   end
 
-  def edit
-  end
+  def edit; end
 
   def create
     @list_item = ListItem.new(list_item_params)

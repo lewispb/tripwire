@@ -1,11 +1,13 @@
 require: rubocop-rails
 
 AllCops:
+  NewCops: enable
   TargetRubyVersion: 3.0
   Exclude:
     - bin/*
     - db/schema.rb
     - db/migrate/*
+    - vendor/**/*
 
 Style/StringLiterals:
   Enabled: true

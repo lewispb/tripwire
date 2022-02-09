@@ -40,7 +40,8 @@ class ListItemsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update list_item" do
-    patch trip_list_list_item_url(@list_item.trip, @list_item.list, @list_item), params: { list_item: { title: "Updated Title" } }
+    patch trip_list_list_item_url(@list_item.trip, @list_item.list, @list_item),
+          params: { list_item: { title: "Updated Title" } }
 
     assert_redirected_to trip_list_url(@list_item.trip, @list_item.list)
   end

@@ -39,9 +39,9 @@ gem "bootsnap", require: false
 
 group :development, :test do
   gem "debug", platforms: [ :mri, :mingw, :x64_mingw ]
+  gem "foreman"
   gem "rubocop"
   gem "rubocop-rails"
-  gem "foreman"
 end
 
 group :development do
