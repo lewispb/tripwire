@@ -16,8 +16,7 @@ It's under development and you're welcome to contribute.
   - Travel Details
     - Air, Train, Bus, Car
 
-
-## Development philosophy
+## Development Philosophy
 
 - Vanilla Ruby on Rails only
 - Modern asset stack (Propshaft and Importmap)
