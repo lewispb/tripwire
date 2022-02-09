@@ -1,27 +1,18 @@
 <%= form_with(model: trip) do |form| %>
-  <% if trip.errors.any? %>
-    <div style="color: red">
-      <h2><%= pluralize(trip.errors.count, "error") %> prohibited this trip from being saved:</h2>
+  <%= render "form_errors", model: trip %>
 
-      <ul>
-        <% trip.errors.each do |error| %>
-          <li><%= error.full_message %></li>
-        <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-  <div>
-    <%= form.label :starts_on, "Leaving on" %>
-    <%= form.date_field :starts_on %>
+  <div class="form-field">
+    <%= form.label :starts_on, class: "label" %>
+    <%= form.date_field :starts_on, class: "input-text" %>
   </div>
 
-  <div>
-    <%= form.label :ends_on, "Returning on" %>
-    <%= form.date_field :ends_on %>
+  <div class="form-field">
+    <%= form.label :ends_on, class: "label" %>
+    <%= form.date_field :ends_on, class: "input-text" %>
+    <p class="hint">Optional</p>
   </div>
 
-  <div>
-    <%= form.submit %>
+  <div class="form-actions">
+    <%= form.submit class: "button" %>
   </div>
 <% end %>
