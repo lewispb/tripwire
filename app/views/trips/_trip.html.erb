@@ -1,4 +1,4 @@
-<div id="<%= dom_id trip %>">
+<div id="<%= dom_id trip %>" class="card">
   <p>
     <strong>Starts on:</strong>
     <%= trip.starts_on %>
@@ -19,4 +19,8 @@
     <%= trip.destination_id %>
   </p>
 
+
+  <p>
+    <%= link_to "Show this trip", trip %>
+  </p>
 </div>

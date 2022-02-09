@@ -1,14 +1,12 @@
-<p style="color: green"><%= notice %></p>
+<header class="header">
+  <h1>Your Trips</h1>
 
-<h1>Trips</h1>
-
-<div id="trips">
-  <% @trips.each do |trip| %>
-    <%= render trip %>
-    <p>
-      <%= link_to "Show this trip", trip %>
-    </p>
+  <%= link_to new_trip_path, class: "button" do %>
+    <i class="gg-add"></i>
+    New Trip
   <% end %>
-</div>
+</header>
 
-<%= link_to "New trip", new_trip_path %>
+<div class="cards">
+  <%= render @trips %>
+</div>

@@ -1,24 +1,25 @@
-# README
+# TripWire
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+TripWire is an open source Ruby on Rails application to help you plan your next trip.
 
-Things you may want to cover:
+It's under development and you're welcome to contribute.
 
-* Ruby version
+## Desired Features
 
-* System dependencies
+- User Authentication
+- Trip Management
+  - Lists
+    - Packing List
+    - Document List (Travel and COVID documents)
+    - Todo List
+    - Activity Lists
+  - Travel Details
+    - Air, Train, Bus, Car
 
-* Configuration
+## Development philosophy
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+- Vanilla Ruby on Rails only
+- Modern asset stack (Propshaft and Importmap)
+- HTML Over The Wire (minimal client side JS)
+- Minimal external dependencies - utility gems are OK, full-stack gems (e.g. Devise) are not
+- Good, pragmatic test coverage using minitest
