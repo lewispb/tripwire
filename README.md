@@ -16,6 +16,7 @@ It's under development and you're welcome to contribute.
   - Travel Details
     - Air, Train, Bus, Car
 
+
 ## Development philosophy
 
 - Vanilla Ruby on Rails only
@@ -23,3 +24,11 @@ It's under development and you're welcome to contribute.
 - HTML Over The Wire (minimal client side JS)
 - Minimal external dependencies - utility gems are OK, full-stack gems (e.g. Devise) are not
 - Good, pragmatic test coverage using minitest
+
+
+## Development
+
+```
+bin/rails db:setup
+foreman start -f Procfile.dev
+```
