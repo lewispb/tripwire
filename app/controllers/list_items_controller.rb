@@ -1,22 +1,22 @@
 class ListItemsController < ApplicationController
-  include TripScoped, ListScoped
+  include ListScoped
 
   before_action :set_list_item, only: [ :show, :edit, :update, :destroy ]
 
   def index
-    @list_items = ListItem.all
+    @list_items = @list.items.all
   end
 
   def show; end
 
   def new
-    @list_item = ListItem.new(list: @list)
+    @list_item = @list.items.new(list: @list)
   end
 
   def edit; end
 
   def create
-    @list_item = ListItem.new(list_item_params)
+    @list_item = @list.items.new(list_item_params)
 
     if @list_item.save
       redirect_to [ @list.trip, @list ], notice: "List item was successfully created."
@@ -40,7 +40,7 @@ class ListItemsController < ApplicationController
 
   private
     def set_list_item
-      @list_item = ListItem.find(params[:id])
+      @list_item = @list.items.find(params[:id])
     end
 
     def list_item_params

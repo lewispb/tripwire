@@ -36,3 +36,15 @@ Layout/IndentationConsistency:
 
 Layout/EmptyLinesAroundAccessModifier:
   Enabled: false
+
+Naming/MemoizedInstanceVariableName:
+  EnforcedStyleForLeadingUnderscores: required
+
+Lint/AssignmentInCondition:
+  Enabled: false
+
+Rails/FilePath:
+  Enabled: false
+
+Bundler/OrderedGems:
+  Enabled: false

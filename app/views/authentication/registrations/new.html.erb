@@ -1,0 +1,34 @@
+<h1>Sign Up</h1>
+
+<%= form_with(model: @registration) do |form| %>
+  <%= render "form_errors", model: form.object %>
+
+  <div class="form-field">
+    <%= form.label :name, class: "label" %>
+    <%= form.text_field :name, class: "input-text" %>
+  </div>
+
+  <div class="form-field">
+    <%= form.label :email, class: "label" %>
+    <%= form.text_field :email, class: "input-text" %>
+  </div>
+
+  <div class="form-field">
+    <%= form.label :password, class: "label" %>
+    <%= form.password_field :password, class: "input-text" %>
+  </div>
+
+  <div class="form-field">
+    <%= form.label :password_confirmation, class: "label" %>
+    <%= form.password_field :password_confirmation, class: "input-text" %>
+  </div>
+
+  <div class="form-actions">
+    <%= form.submit class: "button" %>
+  </div>
+<% end %>
+
+<p>
+  Have an account?
+  <%= link_to "Sign In", new_authentication_session_path %>
+</p>

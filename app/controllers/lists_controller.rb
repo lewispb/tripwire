@@ -4,19 +4,19 @@ class ListsController < ApplicationController
   before_action :set_list, only: [ :show, :edit, :update, :destroy ]
 
   def index
-    @lists = List.all
+    @lists = @trip.lists.all
   end
 
   def show; end
 
   def new
-    @list = List.new(trip: @trip)
+    @list = @trip.lists.new(trip: @trip)
   end
 
   def edit; end
 
   def create
-    @list = List.new(list_params)
+    @list = @trip.lists.new(list_params)
 
     if @list.save
       redirect_to [ @trip, @list ], notice: "List was successfully created."
@@ -40,7 +40,7 @@ class ListsController < ApplicationController
 
   private
     def set_list
-      @list = List.find(params[:id])
+      @list = @trip.lists.find(params[:id])
     end
 
     def list_params

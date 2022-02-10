@@ -5,37 +5,26 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby "3.0.3"
 
-# Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
-gem "rails", "~> 7.0.1"
-
+# Core
 gem "pg"
-
 gem "puma"
-
-# Use JavaScript with ESM import maps [https://github.com/rails/importmap-rails]
-gem "importmap-rails"
-
-# Hotwire's SPA-like page accelerator [https://turbo.hotwired.dev]
-gem "turbo-rails"
-
-# Hotwire's modest JavaScript framework [https://stimulus.hotwired.dev]
-gem "stimulus-rails"
-
-gem "dartsass-rails", github: "rails/dartsass-rails"
-gem "propshaft", github: "rails/propshaft"
-
-# Use Redis adapter to run Action Cable in production
+gem "rails", "~> 7.0.1"
 gem "redis", "~> 4.0"
 
-# Use Kredis to get higher-level data types in Redis [https://github.com/rails/kredis]
-# gem "kredis"
+# Frontend
+gem "dartsass-rails", github: "rails/dartsass-rails"
+gem "importmap-rails"
+gem "propshaft", github: "rails/propshaft"
+gem "stimulus-rails"
+gem "turbo-rails"
 
-# Use Active Model has_secure_password [https://guides.rubyonrails.org/active_model_basics.html#securepassword]
-# gem "bcrypt", "~> 3.1.7"
+# Authentication
+gem "email_validator"
+gem "bcrypt", "~> 3.1.7"
 
-gem "tzinfo-data", platforms: %i[mingw mswin x64_mingw jruby]
-
+# Infra
 gem "bootsnap", require: false
+gem "tzinfo-data", platforms: [ :mingw, :mswin, :x64_mingw, :jruby ]
 
 group :development, :test do
   gem "debug", platforms: [ :mri, :mingw, :x64_mingw ]

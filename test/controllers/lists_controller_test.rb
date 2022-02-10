@@ -2,6 +2,8 @@ require "test_helper"
 
 class ListsControllerTest < ActionDispatch::IntegrationTest
   setup do
+    sign_in_as :lewis
+
     @trip = trips(:lon_brs_trip)
     @list = lists(:packing_list)
   end
