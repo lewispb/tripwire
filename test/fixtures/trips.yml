@@ -1,10 +1,12 @@
 lon_brs_trip:
+  user: lewis
   starts_on: 2022-02-08
   ends_on: 2022-02-08
   origin: london_location
   destination: bristol_location
 
 brs_lon_trip:
+  user: lewis
   starts_on: 2022-02-08
   ends_on: 2022-02-08
   origin: bristol_location

@@ -42,3 +42,6 @@ Naming/MemoizedInstanceVariableName:
 
 Lint/AssignmentInCondition:
   Enabled: false
+
+Rails/FilePath:
+  Enabled: false

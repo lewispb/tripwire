@@ -3,4 +3,6 @@ class User < ApplicationRecord
 
   validates :name, presence: true
   validates :email, presence: true, email: { mode: :strict, require_fqdn: true }
+
+  has_many :trips, dependent: :destroy
 end

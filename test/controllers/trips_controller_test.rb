@@ -4,6 +4,8 @@ require "test_helper"
 
 class TripsControllerTest < ActionDispatch::IntegrationTest
   setup do
+    sign_in_as :lewis
+
     @trip = trips(:lon_brs_trip)
   end
 
