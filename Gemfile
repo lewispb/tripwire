@@ -24,7 +24,7 @@ gem "bcrypt", "~> 3.1.7"
 
 # Infra
 gem "bootsnap", require: false
-gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
+gem "tzinfo-data", platforms: [ :mingw, :mswin, :x64_mingw, :jruby ]
 
 group :development, :test do
   gem "debug", platforms: [ :mri, :mingw, :x64_mingw ]

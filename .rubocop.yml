@@ -45,3 +45,6 @@ Lint/AssignmentInCondition:
 
 Rails/FilePath:
   Enabled: false
+
+Bundler/OrderedGems:
+  Enabled: false
