@@ -14,8 +14,11 @@
     <div class="container">
       <nav>
         <%= link_to "TripWire", root_path %>
+        <%= render "current_user" if Current.user %>
       </nav>
       <main>
+        <%= render "flash" %>
+
         <%= yield %>
       </main>
     </div>

@@ -6,6 +6,8 @@ class Authentication::Session
   validates :email, presence: true, email: true
   validates :password, presence: true
 
+  delegate :id, to: :user, prefix: true
+
   def authenticate
     return unless valid?
 
@@ -16,6 +18,6 @@ class Authentication::Session
 
   private
     def user
-      User.find_by(email: email)
+      @_user ||= User.find_by(email: email)
     end
 end
